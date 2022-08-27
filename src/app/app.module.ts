@@ -13,6 +13,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CreateClientComponent } from './components/create-client/create-client.component';
 import { ListsClientComponent } from './components/lists-client/lists-client.component';
 import { DetailClientComponent } from './components/detail-client/detail-client.component';
+import { DeleteClientComponent } from './components/delete-client/delete-client.component';
 
 const routes: Routes = [
   {path: "homepage", component: HomepageComponent, title: "HomePage"},
@@ -35,7 +36,8 @@ const routes: Routes = [
     NotFoundComponent,
     CreateClientComponent,
     ListsClientComponent,
-    DetailClientComponent
+    DetailClientComponent,
+    DeleteClientComponent
   ],
   imports: [
     BrowserModule,

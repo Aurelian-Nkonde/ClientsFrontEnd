@@ -23,4 +23,13 @@ export class ClientService {
     let newUrl = `${this.url}/${id}`;
     return this.http.get<ClientInterface>(newUrl);
   }
+
+  deleteClient(id: number): Observable<unknown>{
+    let newUrl = `${this.url}/${id}`;
+    return this.http.delete(newUrl);
+  }
+
+  createClient(data: ClientInterface): Observable<ClientInterface>{
+    return this.http.post<ClientInterface>(this.url, data);
+  }
 }

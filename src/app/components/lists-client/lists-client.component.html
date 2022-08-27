@@ -21,7 +21,9 @@
                     <td class="font-serif py-1 text-xl border-2 border-gray-400 underline">
                         <a routerLink="/client/{{client.id}}">moreInfo</a>
                     </td>
-                    <td class="font-serif py-1 text-xl border-2 border-gray-400 underline">Delete</td>
+                    <td class="font-serif py-1 text-xl border-2 border-gray-400 underline">
+                        <app-delete-client [id]="client.id"></app-delete-client>
+                    </td>
                 </tr>
             </tbody>
         </table>

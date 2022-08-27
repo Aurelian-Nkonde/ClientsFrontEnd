@@ -1,37 +1,37 @@
 <div class="container max-w-4xl mx-auto py-20 px-10">
     <h2 class="font-serif text-4xl text-center font-bold pb-3">Create a Client</h2>
-    <form class="max-w-xl mx-auto shadow-lg p-5">
+    <form class="max-w-xl mx-auto shadow-lg p-5" [formGroup]="clientFormGroup" (ngSubmit)="createClient()">
         <div class="py-2 flex flex-col">
             <label for="" class="font-sans pb-1 text-xl text-black">Name</label>
-            <input type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
+            <input type="text" formControlName="name" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
         </div>
         <div class="py-2 flex flex-col">
             <label for="" class="font-sans pb-1 text-xl text-black">Email</label>
-            <input type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
+            <input type="text" formControlName="email" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
         </div>
         <div class="py-2 flex flex-col">
             <label for="" class="font-sans pb-1 text-xl text-black">City</label>
-            <input type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
+            <input type="text"  formControlName="city" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
         </div>
         <div class="py-2 flex flex-col">
             <label for="" class="font-sans pb-1 text-xl text-black">Amount</label>
-            <input type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
+            <input type="text"  formControlName="amount" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
         </div>
         <div class="py-2 grid gap-4 grid-cols-2">
             <div class="py-2 flex flex-col">
                 <label for="" class="font-sans pb-1 text-xl text-black">Age</label>
-                <input type="number" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
+                <input type="number" formControlName="age" class="w-full py-1 px-4 font-sans text-xl border-2 border-black">
             </div>
             <div class="py-2 flex flex-col">
                 <label for="" class="font-sans pb-1 text-xl text-black">Gender</label>
                 <!-- <input type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-black"> -->
-                <select class="bg-black text-white py-2" name="" id="">
+                <select formControlName="gender"  class="bg-black valu text-white py-2" name="" id="">
                     <option ></option>
-                    <option  value="">Male</option>
-                    <option  value="">Female</option>
+                    <option  value="Male">Male</option>
+                    <option  value="Female">Female</option>
                 </select>
             </div>
         </div>
-        <button class="bg-red-600 py-3 w-full text-white text-xl">Create</button>
+        <button type="submit" class="bg-red-600 py-3 w-full text-white text-xl">Create</button>
     </form>
 </div>
