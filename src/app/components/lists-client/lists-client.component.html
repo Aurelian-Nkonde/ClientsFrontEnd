@@ -1,0 +1,29 @@
+<div class="container max-w-5xl mx-auto py-20 px-10">
+    <h1 class="font-sans pb-10  text-4xl md:text-5xl text-gray-900 tracking-wide font-bold">First<span class="text-gray-400">Clients</span></h1>
+    
+    <div class="" *ngIf="clients">
+        <h1 class="fon-serif text-3xl pb-2 underline">List of Our Clients..</h1>
+        <table class="table table-fixed w-full text-center border-2 border-red-300">
+            <thead class="bg-red-600">
+                <tr class="">
+                    <th class="py-4 font-serif text-2xl tracking-wide">Id</th>
+                    <th class="py-4 font-serif text-2xl tracking-wide">Name</th>
+                    <th class="py-4 font-serif text-2xl tracking-wide">City</th>
+                    <th class="py-4 font-serif text-2xl tracking-wide">Option1</th>
+                    <th class="py-4 font-serif text-2xl tracking-wide">Option2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="" *ngFor="let client of clients">
+                    <td class="font-serif py-3 text-xl">{{ client.id }}</td>
+                    <td class="font-serif py-3 text-xl">{{ client.name }}</td>
+                    <td class="font-serif py-3 text-xl">{{ client.city }}</td>
+                    <td class="font-serif py-1 text-xl border-2 border-gray-400 underline">
+                        <a routerLink="/client/{{client.id}}">moreInfo</a>
+                    </td>
+                    <td class="font-serif py-1 text-xl border-2 border-gray-400 underline">Delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

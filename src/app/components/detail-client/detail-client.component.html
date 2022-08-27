@@ -1,0 +1,31 @@
+<div class="container max-w-4xl mx-auto py-20 px-10">
+    <h2 class="font-serif text-4xl text-center font-bold pb-3">Client Details</h2>
+    <form class="max-w-xl mx-auto shadow-lg p-5" *ngIf="client">
+        <div class="py-2 flex flex-col">
+            <label for="" class="font-sans pb-1 text-xl text-black">Name</label>
+            <input value="{{client.name}}" type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-gray-300" disabled>
+        </div>
+        <div class="py-2 flex flex-col">
+            <label for="" class="font-sans pb-1 text-xl text-black">Email</label>
+            <input value="{{client.email}}" type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-gray-300" disabled>
+        </div>
+        <div class="py-2 flex flex-col">
+            <label for="" class="font-sans pb-1 text-xl text-black">City</label>
+            <input value="{{client.city}}" type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-gray-300" disabled>
+        </div>
+        <div class="py-2 flex flex-col">
+            <label for="" class="font-sans pb-1 text-xl text-black">Amount</label>
+            <input value="{{client.amount}}" type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-gray-300" disabled>
+        </div>
+        <div class="py-2 grid gap-4 grid-cols-2">
+            <div class="py-2 flex flex-col">
+                <label for="" class="font-sans pb-1 text-xl text-black">Age</label>
+                <input value="{{client.age}}" type="number" class="w-full py-1 px-4 font-sans text-xl border-2 border-gray-300" disabled>
+            </div>
+            <div class="py-2 flex flex-col">
+                <label for="" class="font-sans pb-1 text-xl text-gray-300" disabled>Gender</label>
+                <input value="{{client.gender}}" type="text" class="w-full py-1 px-4 font-sans text-xl border-2 border-gray-300">
+            </div>
+        </div>
+    </form>
+</div>
